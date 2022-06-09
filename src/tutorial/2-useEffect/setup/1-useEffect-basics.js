@@ -8,7 +8,7 @@ const UseEffectBasics = () => {
     console.log('Call useEffect');
     if(value > 0)
       document.title = `New Messages(${value})`;
-  })
+  }, [value]); // By passing an empty array we can run useEffect only once when component is rendered
   return (
   <>
     <h1>{value}</h1>
